@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Cupos - OVAS 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Administración de Cupos OVAS 2026</h1>
+        <p class="info-text">Configure el límite máximo de inscripciones por rango de edad. Los cambios se aplican de inmediato en el formulario público.</p>
+
+        <div id="loginSection">
+            <div class="form-group">
+                <label>Clave de administrador *</label>
+                <input type="password" id="adminPassword">
+            </div>
+            <button type="button" id="btnLogin" class="btn-primary">Ingresar</button>
+            <p id="loginError" class="msg-error" style="display:none;"></p>
+        </div>
+
+        <div id="panelSection" style="display:none;">
+            <table class="tabla-admin">
+                <thead>
+                    <tr>
+                        <th>Rango de Edad</th>
+                        <th>Categoría</th>
+                        <th>Inscritos</th>
+                        <th>Límite Máximo</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaCuposBody"></tbody>
+            </table>
+            <button type="button" id="btnGuardar" class="btn-primary">Guardar Cambios</button>
+            <p id="guardarMsg" style="display:none;"></p>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
