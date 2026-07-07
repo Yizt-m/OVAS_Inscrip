@@ -28,4 +28,4 @@ legend { font-weight: bold; color: var(--primary-color); }
     font-weight: bold;
     font-size: 0.85em;
 }
-.msg-error { color: var(--error-border); font-size: 0.9em; margin-top: 5px; }
+.msg-error { color: var(--error-border); font-size: 0.9em; margin-top: 5px; } 
