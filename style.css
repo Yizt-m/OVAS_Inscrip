@@ -3,19 +3,29 @@
     --error-bg: #ffe6e6;
     --error-border: #ff0000;
 }
-body { font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; background-color: #f4f7f6; padding: 20px; margin: 0; }
 .form-container { max-width: 700px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-h1 { text-align: center; color: var(--primary-color); }
+h1 { text-align: center; color: var(--primary-color); font-size: 1.6em; }
 .info-text { font-size: 0.9em; color: #555; text-align: center; margin-bottom: 20px; }
-fieldset { border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px; }
-legend { font-weight: bold; color: var(--primary-color); }
+fieldset { border: 1px solid #ddd; border-radius: 5px; padding: 20px; margin-bottom: 20px; min-width: 0; }
+legend { font-weight: bold; color: var(--primary-color); padding: 0 5px; }
 .form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
 .form-group label { margin-bottom: 5px; font-weight: bold; font-size: 0.9em; }
-.form-group input, .form-group select { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* evita el zoom automático al enfocar en iOS/Android */
+    font-family: inherit;
+}
 .participante-card { border-left: 4px solid var(--primary-color); padding-left: 15px; margin-bottom: 20px; }
-.btn-primary, .btn-secondary { padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; }
+.btn-primary, .btn-secondary { padding: 12px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 1em; }
 .btn-primary { background-color: var(--primary-color); color: white; width: 100%; }
-.btn-secondary { background-color: #e2e8f0; color: #333; margin-bottom: 10px; }
+.btn-secondary { background-color: #e2e8f0; color: #333; margin-bottom: 10px; width: 100%; }
 
 /* Estilos para el estado de cupos agotados */
 .cupos-agotados {
@@ -33,8 +43,25 @@ legend { font-weight: bold; color: var(--primary-color); }
 .participante-card h3 { margin-top: 0; color: var(--primary-color); font-size: 1em; }
 .btn-quitar { background-color: var(--error-bg); color: var(--error-border); margin-top: 5px; }
 
-.tabla-admin { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.tabla-wrap { width: 100%; overflow-x: auto; margin-bottom: 20px; }
+.tabla-admin { width: 100%; min-width: 420px; border-collapse: collapse; margin-bottom: 0; }
 .tabla-admin th, .tabla-admin td { border: 1px solid #ddd; padding: 8px; text-align: center; }
 .tabla-admin th { background-color: #f4f7f6; }
-.input-limite { width: 80px; padding: 5px; text-align: center; }
+.input-limite { width: 80px; max-width: 100%; padding: 5px; text-align: center; font-size: 16px; }
+
+/* ============ Responsivo ============ */
+@media (max-width: 600px) {
+    body { padding: 0; }
+    .form-container { max-width: 100%; padding: 16px; border-radius: 0; box-shadow: none; }
+    h1 { font-size: 1.3em; }
+    .info-text { font-size: 0.85em; }
+    fieldset { padding: 14px; }
+    legend { font-size: 0.95em; }
+    .participante-card { padding-left: 10px; }
+    .tabla-admin th, .tabla-admin td { padding: 6px; font-size: 0.85em; }
+}
+
+@media (max-width: 360px) {
+    h1 { font-size: 1.15em; }
+}
 
