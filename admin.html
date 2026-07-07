@@ -21,21 +21,23 @@
         </div>
 
         <div id="panelSection" style="display:none;">
-            <table class="tabla-admin">
-                <thead>
-                    <tr>
-                        <th>Rango de Edad</th>
-                        <th>Categoría</th>
-                        <th>Inscritos</th>
-                        <th>Límite Máximo</th>
-                    </tr>
-                </thead>
-                <tbody id="tablaCuposBody"></tbody>
-            </table>
+            <div class="tabla-wrap">
+                <table class="tabla-admin">
+                    <thead>
+                        <tr>
+                            <th>Rango de Edad</th>
+                            <th>Categoría</th>
+                            <th>Inscritos</th>
+                            <th>Límite Máximo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCuposBody"></tbody>
+                </table>
+            </div>
             <button type="button" id="btnGuardar" class="btn-primary">Guardar Cambios</button>
             <p id="guardarMsg" style="display:none;"></p>
         </div>
     </div>
     <script src="admin.js"></script>
 </body>
-</html> 
+</html>
