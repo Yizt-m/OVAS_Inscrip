@@ -28,4 +28,13 @@ legend { font-weight: bold; color: var(--primary-color); }
     font-weight: bold;
     font-size: 0.85em;
 }
-.msg-error { color: var(--error-border); font-size: 0.9em; margin-top: 5px; } 
+.msg-error { color: var(--error-border); font-size: 0.9em; margin-top: 5px; }
+
+.participante-card h3 { margin-top: 0; color: var(--primary-color); font-size: 1em; }
+.btn-quitar { background-color: var(--error-bg); color: var(--error-border); margin-top: 5px; }
+
+.tabla-admin { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.tabla-admin th, .tabla-admin td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+.tabla-admin th { background-color: #f4f7f6; }
+.input-limite { width: 80px; padding: 5px; text-align: center; }
+
