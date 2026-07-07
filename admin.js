@@ -1,7 +1,7 @@
 // Debe ser la misma URL usada en app.js
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzNmAue-q-jIrDwNT71-YiTFqDtJDD2qiAau8y-QJEvaOL9F7gpVLbs6DWGCWOOeZKo/exec';
 
-let adminPassword = '';
+let adminPassword = ''; 
 
 document.getElementById('btnLogin').addEventListener('click', async () => {
     const pwd = document.getElementById('adminPassword').value;
